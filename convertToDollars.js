@@ -1,5 +1,3 @@
-var random = require('./randomNumber.js');
-
 function toUSD(number) {
     var number = number.toString(),
         dollars = number.split('.')[0],
@@ -9,7 +7,5 @@ function toUSD(number) {
         .split('').reverse().join('');
     return '$' + dollars + '.' + cents.slice(0, 2);
 }
-
-console.log(toUSD(random(100, 1000000)));
 
 module.exports = toUSD
